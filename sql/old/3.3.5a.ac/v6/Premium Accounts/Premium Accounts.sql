@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `account_premium_apocalypsecore` (
   `premium_type` tinyint(4) unsigned NOT NULL default '1',
   `active` tinyint(4) NOT NULL default '1',
   PRIMARY KEY  (`id`,`setdate`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Premium Accounts';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Premium Accounts Apocalypse Core';

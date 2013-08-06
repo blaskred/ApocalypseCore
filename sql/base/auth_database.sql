@@ -110,6 +110,32 @@ LOCK TABLES `account_banned` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `account_premium_apocalypsecore`
+--
+
+DROP TABLE IF EXISTS `account_premium_apocalypsecore`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS `account_premium_apocalypsecore` (
+  `id` int(11) NOT NULL default '0' COMMENT 'Account id',
+  `setdate` bigint(40) NOT NULL default '0',
+  `unsetdate` bigint(40) NOT NULL default '0',
+  `premium_type` tinyint(4) unsigned NOT NULL default '1',
+  `active` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`id`,`setdate`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Premium Accounts Apocalypse Core';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `account_premium_apocalypsecore`
+--
+
+LOCK TABLES `account_premium_apocalypsecore` WRITE;
+/*!40000 ALTER TABLE `account_premium_apocalypsecore` DISABLE KEYS */;
+/*!40000 ALTER TABLE `account_premium_apocalypsecore` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `autobroadcast`
 --
 

@@ -1394,6 +1394,37 @@ LOCK TABLES `creature_respawn` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `daily_players_reports`
+--
+
+DROP TABLE IF EXISTS `daily_players_reports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `daily_players_reports` (
+  `guid` int(10) unsigned NOT NULL DEFAULT '0',
+  `creation_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `average` float NOT NULL DEFAULT '0',
+  `total_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `speed_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `fly_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `jump_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `waterwalk_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `teleportplane_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `climb_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`guid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `daily_players_reports`
+--
+
+LOCK TABLES `daily_players_reports` WRITE;
+/*!40000 ALTER TABLE `daily_players_reports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `daily_players_reports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `game_event_condition_save`
 --
 
@@ -2191,6 +2222,34 @@ LOCK TABLES `mail` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `mail_external`
+--
+
+DROP TABLE IF EXISTS `mail_external`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mail_external` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `receiver` int(10) unsigned NOT NULL,
+  `subject` varchar(200) DEFAULT 'Support Message',
+  `message` varchar(200) DEFAULT '',
+  `money` int(10) unsigned NOT NULL DEFAULT '0',
+  `item` int(10) unsigned NOT NULL DEFAULT '0',
+  `item_count` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mail_external`
+--
+
+LOCK TABLES `mail_external` WRITE;
+/*!40000 ALTER TABLE `mail_external` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mail_external` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `mail_items`
 --
 
@@ -2352,6 +2411,37 @@ CREATE TABLE `petition_sign` (
 LOCK TABLES `petition_sign` WRITE;
 /*!40000 ALTER TABLE `petition_sign` DISABLE KEYS */;
 /*!40000 ALTER TABLE `petition_sign` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `players_reports_status`
+--
+
+DROP TABLE IF EXISTS `players_reports_status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `players_reports_status` (
+  `guid` int(10) unsigned NOT NULL DEFAULT '0',
+  `creation_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `average` float NOT NULL DEFAULT '0',
+  `total_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `speed_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `fly_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `jump_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `waterwalk_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `teleportplane_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `climb_reports` bigint(20) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`guid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `players_reports_status`
+--
+
+LOCK TABLES `players_reports_status` WRITE;
+/*!40000 ALTER TABLE `players_reports_status` DISABLE KEYS */;
+/*!40000 ALTER TABLE `players_reports_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

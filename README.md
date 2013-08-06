@@ -10,11 +10,12 @@ Gracias a quienes hacen este proyecto posible o estuvieron anteriormente y su re
  
 ## Version actual: v7
 
-+Copyright (C) ScriptDev2     <http://www.scriptdev2.com/>
-+Copyright (C) TrinityCore    <http://www.trinitycore.org>
-+Copyright (C) One            <https://github.com/Oneluiz>
-+Copyright (C) chacal1231     <https://github.com/chacal1231>
-+Copyright (C) Alina Jezabel  <https://github.com/Jezabel>
++ Copyright (C) ScriptDev2     [Scriptdev2.com](http://www.scriptdev2.com/)
++ Copyright (C) TrinityCore    [Trinitycore.org](http://www.trinitycore.org)
++ Copyright (C) ApocalypseCore [ApocalypseCore](http://apocalypsecore.tk/)
++ Copyright (C) One            [One](https://github.com/Oneluiz)
++ Copyright (C) chacal1231     [Chacal1231](https://github.com/chacal1231)
++ Copyright (C) Alina Jezabel  [Jezabel](https://github.com/Jezabel)
 
 If you want to participate in the project contact us
 
