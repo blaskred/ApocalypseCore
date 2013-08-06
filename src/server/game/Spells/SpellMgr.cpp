@@ -3499,7 +3499,7 @@ void SpellMgr::LoadSpellInfoCorrections()
             case 70859: // Upper Spire Teleport
             case 70860: // Frozen Throne Teleport
             case 70861: // Sindragosa's Lair Teleport
-                spellInfo->DurationEntry = sSpellDurationStore.LookupEntry(85);
+                spellInfo->Effects[EFFECT_0].TargetA = SpellImplicitTargetInfo(TARGET_DEST_DB);
                 break;
             case 69055: // Bone Slice (Lord Marrowgar)
             case 70814: // Bone Slice (Lord Marrowgar)
