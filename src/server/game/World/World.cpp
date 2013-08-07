@@ -1233,6 +1233,8 @@ void World::LoadConfigSettings(bool reload)
 	m_int_configs[CONFIG_ANTICHEAT_MAX_REPORTS_FOR_DAILY_REPORT] = sConfigMgr->GetIntDefault("Anticheat.MaxReportsForDailyReport",70);
     m_bool_configs[CONFIG_BAN_PLAYER] = sConfigMgr->GetBoolDefault("Anticheat.Ban", true);
 	
+    m_bool_configs[CONFIG_CHANNEL_ON_CITY_ONLY_FLAG]  = sConfigMgr->GetBoolDefault("Channel.CityOnlyFlag", true);
+	
     // Wintergrasp battlefield
     m_bool_configs[CONFIG_WINTERGRASP_ENABLE] = sConfigMgr->GetBoolDefault("Wintergrasp.Enable", false);
     m_int_configs[CONFIG_WINTERGRASP_PLR_MAX] = sConfigMgr->GetIntDefault("Wintergrasp.PlayerMax", 100);
