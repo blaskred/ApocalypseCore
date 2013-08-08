@@ -18,6 +18,9 @@
 #include "ScriptLoader.h"
 #include "AnticheatMgr.h"
 
+//Transmogrification
+void AddSC_NPC_Transmogrify();
+
 //examples
 void AddSC_example_creature();
 void AddSC_example_escort();
@@ -1320,6 +1323,8 @@ void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
+    //Transmogrification
+    AddSC_NPC_Transmogrify();
 
 #endif
 }
