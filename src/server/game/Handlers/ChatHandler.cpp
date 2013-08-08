@@ -164,6 +164,14 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recvData)
             recvData.rfinish(); // Prevent warnings
             return;
         }
+		
+        if ((sender->GetTotalPlayedTime() <= sWorld->getIntConfig(CONFIG_INT_CHAT_DISABLE_TIME)) && sender->GetSession()->GetSecurity() == SEC_PLAYER)
+        {
+            std::string adStr = secsToTimeString(sWorld->getIntConfig(CONFIG_INT_CHAT_DISABLE_TIME) - sender->GetTotalPlayedTime());
+            SendNotification(GetTrinityString(LANG_DISABLE_CHAT), adStr.c_str());
+            recvData.rfinish();
+            return;
+        }
 
         if (type != CHAT_MSG_AFK && type != CHAT_MSG_DND)
             sender->UpdateSpeakTime();

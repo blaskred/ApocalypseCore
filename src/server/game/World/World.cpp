@@ -881,6 +881,9 @@ void World::LoadConfigSettings(bool reload)
     m_int_configs[CONFIG_MAIL_DELIVERY_DELAY] = sConfigMgr->GetIntDefault("MailDeliveryDelay", HOUR);
 	m_bool_configs[CONFIG_EXTERNAL_MAIL] = sConfigMgr->GetIntDefault("ExternalMail", false);
     m_int_configs[CONFIG_EXTERNAL_MAIL_INTERVAL] = sConfigMgr->GetIntDefault("ExternalMailInterval", 1); 
+	
+     // Disable Chat
+    m_int_configs[CONFIG_INT_CHAT_DISABLE_TIME]  = sConfigMgr->GetIntDefault("Chat.DisableWhenPlayerCreate", 60);
 
     m_int_configs[CONFIG_UPTIME_UPDATE] = sConfigMgr->GetIntDefault("UpdateUptimeInterval", 10);
     if (int32(m_int_configs[CONFIG_UPTIME_UPDATE]) <= 0)
